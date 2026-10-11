@@ -8,6 +8,16 @@
         "course",
         "marks"
     ],
+    "column_data_types": {
+        "student_id": "int64",
+        "name": "str",
+        "age": "str",
+        "course": "str",
+        "marks": "float64"
+    },
+    "invalid_age_values": [
+        "twenty"
+    ],
     "missing_values": {
         "student_id": 0,
         "name": 0,

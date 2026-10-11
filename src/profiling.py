@@ -46,7 +46,14 @@ age_numbers = pd.to_numeric(data["age"], errors="coerce")
 
 print("\nInvalid age values:")
 print(data.loc[age_numbers.isna() & data["age"].notna(), "age"])
+# Find invalid age values
+invalid_age_values = data.loc[
+    age_numbers.isna() & data["age"].notna(),
+    "age"
+].tolist()
 
+print("\nInvalid age values for report:")
+print(invalid_age_values)
 import json
 
 # Count missing values in each column
@@ -60,10 +67,16 @@ duplicate_count = int(
 )
 
 # Prepare the profiling report
+
 report = {
     "total_rows": int(data.shape[0]),
     "total_columns": int(data.shape[1]),
     "column_names": data.columns.tolist(),
+    "column_data_types": {
+        column: str(data[column].dtype)
+        for column in data.columns
+    },
+    "invalid_age_values": invalid_age_values,
     "missing_values": {
         key: int(value)
         for key, value in missing_values.items()
