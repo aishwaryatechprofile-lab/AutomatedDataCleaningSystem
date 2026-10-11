@@ -1,0 +1,19 @@
+{
+    "total_rows": 6,
+    "total_columns": 5,
+    "column_names": [
+        "student_id",
+        "name",
+        "age",
+        "course",
+        "marks"
+    ],
+    "missing_values": {
+        "student_id": 0,
+        "name": 0,
+        "age": 1,
+        "course": 0,
+        "marks": 1
+    },
+    "potential_duplicates": 1
+}
