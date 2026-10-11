@@ -4,3 +4,8 @@ __pycache__/
 *.py[cod]
 .idea/
 
+
+# Environment variables and secrets
+.env
+
+# Keep generated project outputs available in Git
