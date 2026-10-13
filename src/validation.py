@@ -4,7 +4,18 @@ import pandas as pd
 
 # Find the project folder
 project_folder = Path(__file__).resolve().parent.parent
+# Find the configuration file
+config_path = project_folder / "config.json"
 
+# Read the configuration
+with open(config_path, "r") as file:
+    config = json.load(file)
+
+rules = config["validation_rules"]
+min_age = rules["min_age"]
+max_age = rules["max_age"]
+min_marks = rules["min_marks"]
+max_marks = rules["max_marks"]
 # Find the cleaned CSV file
 file_path = project_folder / "data" / "cleaned_data.csv"
 
@@ -19,19 +30,20 @@ print(data)
 print("\nMissing Values:")
 print(data.isnull().sum())
 
+
 # Check whether ages are within a reasonable range
 invalid_ages = data[
-    (data["age"] < 0) | (data["age"] > 120)
+    (data["age"] < min_age) | (data["age"] > max_age)
 ]
+
 
 print("\nInvalid Ages:")
 print(invalid_ages)
 
-# Check whether marks are between 0 and 100
+# Check whether marks are within the configured range
 invalid_marks = data[
-    (data["marks"] < 0) | (data["marks"] > 100)
+    (data["marks"] < min_marks) | (data["marks"] > max_marks)
 ]
-
 print("\nInvalid Marks:")
 print(invalid_marks)
 
