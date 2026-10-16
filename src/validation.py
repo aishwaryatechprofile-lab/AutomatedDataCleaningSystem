@@ -65,7 +65,8 @@ validation_report = {
     "missing_values": int(data.isnull().sum().sum()),
     "invalid_age_records": int(len(invalid_ages)),
     "invalid_marks_records": int(len(invalid_marks)),
-    "duplicate_records": int(duplicate_records.sum())
+    "duplicate_records": int(duplicate_records.sum()),
+    "validation_status": "PASSED WITH WARNINGS" if len(invalid_ages) == 0 and len(invalid_marks) == 0 and data.isnull().sum().sum() == 0 and duplicate_records.sum() > 0 else "PASSED" if len(invalid_ages) == 0 and len(invalid_marks) == 0 and data.isnull().sum().sum() == 0 else "FAILED"
 }
 
 # Create the reports folder

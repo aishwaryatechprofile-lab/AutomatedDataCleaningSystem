@@ -82,13 +82,16 @@ print("\nPotential Duplicate Records:")
 print(data[duplicate_records])
 
 # Create the cleaning log
+
 cleaning_log = {
     "missing_ages_filled": int(
         missing_before["age"] + invalid_age_count
     ),
     "missing_marks_filled": int(missing_before["marks"]),
-    "potential_duplicates_detected": int(duplicate_records.sum())
+    "potential_duplicates_detected": int(duplicate_records.sum()),
+    "total_rows_after_cleaning": int(len(data))
 }
+
 
 # Create the reports folder
 reports_folder = project_folder / "reports"

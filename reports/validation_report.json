@@ -4,5 +4,6 @@
     "missing_values": 0,
     "invalid_age_records": 0,
     "invalid_marks_records": 0,
-    "duplicate_records": 1
+    "duplicate_records": 1,
+    "validation_status": "PASSED WITH WARNINGS"
 }

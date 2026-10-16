@@ -23,3 +23,8 @@ subprocess.run(
 )
 
 print("\n===== ALL STEPS COMPLETED SUCCESSFULLY =====")
+print("\n===== PROJECT SUMMARY =====")
+print("1. Dataset profiling completed.")
+print("2. Data cleaning completed.")
+print("3. Data validation completed.")
+print("4. Reports saved in the reports folder.")
