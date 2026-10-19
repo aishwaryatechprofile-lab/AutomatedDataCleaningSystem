@@ -81,3 +81,4 @@ with open(report_path, "w", encoding="utf-8") as file:
 
 print("\nValidation report saved to:")
 print(report_path)
+print("\nValidation Status:", validation_report["validation_status"])
