@@ -7,22 +7,34 @@ print("=" * 45)
 print("\n" + "=" * 45)
 print("\nStep 1: Dataset Profiling")
 
-subprocess.run(
-    [sys.executable, "-m", "src.profiling"],
-    check=True
-)
+try:
+    subprocess.run(
+        [sys.executable, "-m", "src.profiling"],
+        check=True
+    )
+except subprocess.CalledProcessError:
+    print("Error: Dataset profiling failed.")
+    sys.exit(1)
 print("\n" + "=" * 45)
 print("\nStep 2: Data Cleaning")
-subprocess.run(
-    [sys.executable, "-m", "src.cleaning"],
-    check=True
-)
+try:
+    subprocess.run(
+        [sys.executable, "-m", "src.cleaning"],
+        check=True
+    )
+except subprocess.CalledProcessError:
+    print("Error: Data cleaning failed.")
+    sys.exit(1)
 print("\n" + "=" * 45)
 print("\nStep 3: Data Validation")
-subprocess.run(
-    [sys.executable, "-m", "src.validation"],
-    check=True
-)
+try:
+    subprocess.run(
+        [sys.executable, "-m", "src.validation"],
+        check=True
+    )
+except subprocess.CalledProcessError:
+    print("Error: Data validation failed.")
+    sys.exit(1)
 
 print("\n===== ALL STEPS COMPLETED SUCCESSFULLY =====")
 print("\n" + "=" * 45)
