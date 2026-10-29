@@ -8,6 +8,11 @@ project_folder = Path(__file__).resolve().parent.parent
 # Find the sample CSV file
 file_path = project_folder / "data" / "sample_data.csv"
 
+# Check whether the CSV file exists
+if not file_path.exists():
+    print("Error: Sample dataset file not found.")
+    print("Expected location:", file_path)
+    raise SystemExit(1)
 # Read the CSV file
 data = pd.read_csv(file_path)
 
