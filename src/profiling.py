@@ -13,9 +13,14 @@ if not file_path.exists():
     print("Error: Sample dataset file not found.")
     print("Expected location:", file_path)
     raise SystemExit(1)
+
+# Check whether the CSV file is empty
+if file_path.stat().st_size == 0:
+    print("Error: Sample dataset file is empty.")
+    raise SystemExit(1)
+
 # Read the CSV file
 data = pd.read_csv(file_path)
-
 # Display the data
 print("Sample Data:")
 print(data)
