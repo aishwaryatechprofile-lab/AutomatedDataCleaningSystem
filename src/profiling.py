@@ -21,6 +21,10 @@ if file_path.stat().st_size == 0:
 
 # Read the CSV file
 data = pd.read_csv(file_path)
+# Check whether the dataset contains any records
+if data.empty:
+    print("Error: Sample dataset contains no records.")
+    raise SystemExit(1)
 # Display the data
 print("Sample Data:")
 print(data)
