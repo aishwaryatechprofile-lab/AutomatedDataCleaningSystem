@@ -25,6 +25,24 @@ data = pd.read_csv(file_path)
 if data.empty:
     print("Error: Sample dataset contains no records.")
     raise SystemExit(1)
+# Check whether all required columns are available
+required_columns = [
+    "student_id",
+    "name",
+    "age",
+    "course",
+    "marks"
+]
+
+missing_columns = [
+    column for column in required_columns
+    if column not in data.columns
+]
+
+if missing_columns:
+    print("Error: Required columns are missing.")
+    print("Missing columns:", missing_columns)
+    raise SystemExit(1)
 # Display the data
 print("Sample Data:")
 print(data)
