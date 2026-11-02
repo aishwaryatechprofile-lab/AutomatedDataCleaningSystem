@@ -118,6 +118,15 @@ report = {
         for column in data.columns
         if data[column].nunique() == 1
     ],
+    "numerical_statistics": {
+        column: {
+            "minimum": float(data[column].min()),
+            "maximum": float(data[column].max()),
+            "mean": float(data[column].mean()),
+            "median": float(data[column].median())
+        }
+        for column in data.select_dtypes(include="number").columns
+    },
     "invalid_age_values": invalid_age_values,
     "missing_values": {
         key: int(value)

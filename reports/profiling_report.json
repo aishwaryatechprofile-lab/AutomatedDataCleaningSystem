@@ -23,6 +23,20 @@
         "marks": 4
     },
     "constant_columns": [],
+    "numerical_statistics": {
+        "student_id": {
+            "minimum": 101.0,
+            "maximum": 106.0,
+            "mean": 103.5,
+            "median": 103.5
+        },
+        "marks": {
+            "minimum": 72.0,
+            "maximum": 90.0,
+            "mean": 82.0,
+            "median": 85.0
+        }
+    },
     "invalid_age_values": [
         "twenty"
     ],
