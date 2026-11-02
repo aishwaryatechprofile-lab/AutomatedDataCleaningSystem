@@ -127,6 +127,14 @@ report = {
         }
         for column in data.select_dtypes(include="number").columns
     },
+    "categorical_statistics": {
+        column: {
+            "most_frequent": str(data[column].mode()[0]),
+            "frequency": int(data[column].value_counts().iloc[0])
+        }
+        for column in data.select_dtypes(include=["object", "str"]).columns
+        if not data[column].mode().empty
+    },
     "invalid_age_values": invalid_age_values,
     "missing_values": {
         key: int(value)

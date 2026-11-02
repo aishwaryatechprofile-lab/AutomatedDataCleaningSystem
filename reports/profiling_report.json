@@ -37,6 +37,20 @@
             "median": 85.0
         }
     },
+    "categorical_statistics": {
+        "name": {
+            "most_frequent": "Asha",
+            "frequency": 2
+        },
+        "age": {
+            "most_frequent": "21",
+            "frequency": 3
+        },
+        "course": {
+            "most_frequent": "AI",
+            "frequency": 3
+        }
+    },
     "invalid_age_values": [
         "twenty"
     ],
