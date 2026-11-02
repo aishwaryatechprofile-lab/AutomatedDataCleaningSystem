@@ -22,6 +22,7 @@
         "course": 2,
         "marks": 4
     },
+    "constant_columns": [],
     "invalid_age_values": [
         "twenty"
     ],

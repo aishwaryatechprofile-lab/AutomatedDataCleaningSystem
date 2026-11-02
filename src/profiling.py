@@ -112,7 +112,12 @@ report = {
     "unique_values": {
         column: int(data[column].nunique())
         for column in data.columns
-}   ,
+},
+    "constant_columns": [
+        column
+        for column in data.columns
+        if data[column].nunique() == 1
+    ],
     "invalid_age_values": invalid_age_values,
     "missing_values": {
         key: int(value)
