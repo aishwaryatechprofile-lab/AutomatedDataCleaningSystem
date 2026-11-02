@@ -15,6 +15,13 @@
         "course": "str",
         "marks": "float64"
     },
+    "unique_values": {
+        "student_id": 6,
+        "name": 5,
+        "age": 3,
+        "course": 2,
+        "marks": 4
+    },
     "invalid_age_values": [
         "twenty"
     ],

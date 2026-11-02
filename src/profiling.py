@@ -108,6 +108,11 @@ report = {
         column: str(data[column].dtype)
         for column in data.columns
     },
+
+    "unique_values": {
+        column: int(data[column].nunique())
+        for column in data.columns
+}   ,
     "invalid_age_values": invalid_age_values,
     "missing_values": {
         key: int(value)
