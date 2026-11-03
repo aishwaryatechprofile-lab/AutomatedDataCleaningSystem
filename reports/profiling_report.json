@@ -68,5 +68,12 @@
         "course": 0,
         "marks": 1
     },
+    "missing_value_percentage": {
+        "student_id": 0.0,
+        "name": 0.0,
+        "age": 16.67,
+        "course": 0.0,
+        "marks": 16.67
+    },
     "potential_duplicates": 1
 }

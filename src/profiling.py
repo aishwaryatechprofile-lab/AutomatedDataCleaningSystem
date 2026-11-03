@@ -144,6 +144,12 @@ report = {
         key: int(value)
         for key, value in missing_values.items()
     },
+    "missing_value_percentage": {
+        column: round(
+            (data[column].isnull().sum() / len(data)) * 100, 2
+        )
+        for column in data.columns
+    },
     "potential_duplicates": duplicate_count
 }
 
