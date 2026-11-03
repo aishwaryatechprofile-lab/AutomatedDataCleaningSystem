@@ -135,6 +135,10 @@ report = {
         for column in data.select_dtypes(include=["object", "str"]).columns
         if not data[column].mode().empty
     },
+    "data_types": {
+        column: str(data[column].dtype)
+        for column in data.columns
+    },
     "invalid_age_values": invalid_age_values,
     "missing_values": {
         key: int(value)

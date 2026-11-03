@@ -51,6 +51,13 @@
             "frequency": 3
         }
     },
+    "data_types": {
+        "student_id": "int64",
+        "name": "str",
+        "age": "str",
+        "course": "str",
+        "marks": "float64"
+    },
     "invalid_age_values": [
         "twenty"
     ],
