@@ -83,5 +83,13 @@
         0,
         0
     ],
+    "duplicate_rows": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+    ],
     "potential_duplicates": 1
 }

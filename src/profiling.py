@@ -154,6 +154,10 @@ report = {
         int(value)
         for value in data.isnull().sum(axis=1)
     ],
+    "duplicate_rows": [
+        bool(value)
+        for value in data.duplicated()
+    ],
     "potential_duplicates": duplicate_count
 }
 
