@@ -158,6 +158,7 @@ report = {
         bool(value)
         for value in data.duplicated()
     ],
+    "total_duplicate_rows": int(data.duplicated().sum()),
     "potential_duplicates": duplicate_count
 }
 

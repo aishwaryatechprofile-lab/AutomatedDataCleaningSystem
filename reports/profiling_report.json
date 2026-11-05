@@ -91,5 +91,6 @@
         false,
         false
     ],
-    "potential_duplicates": 1
+    "total_duplicate_rows": 0,
+    "potential_duplicates": 1,
 }
