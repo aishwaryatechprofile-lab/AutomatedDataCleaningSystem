@@ -150,6 +150,10 @@ report = {
         )
         for column in data.columns
     },
+    "missing_values_per_row": [
+        int(value)
+        for value in data.isnull().sum(axis=1)
+    ],
     "potential_duplicates": duplicate_count
 }
 

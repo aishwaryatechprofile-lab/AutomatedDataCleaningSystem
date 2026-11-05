@@ -75,5 +75,13 @@
         "course": 0.0,
         "marks": 16.67
     },
+    "missing_values_per_row": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+    ],
     "potential_duplicates": 1
 }
