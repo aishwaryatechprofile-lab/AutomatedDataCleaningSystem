@@ -159,6 +159,9 @@ report = {
         for value in data.duplicated()
     ],
     "total_duplicate_rows": int(data.duplicated().sum()),
+    "duplicate_percentage": round(
+        (data.duplicated().sum() / len(data)) * 100, 2
+    ),
     "potential_duplicates": duplicate_count
 }
 
