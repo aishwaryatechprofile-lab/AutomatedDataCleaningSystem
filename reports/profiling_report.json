@@ -93,5 +93,6 @@
     ],
     "total_duplicate_rows": 0,
     "duplicate_percentage": 0.0,
+    "duplicate_status": "NO DUPLICATES",
     "potential_duplicates": 1
 }

@@ -162,6 +162,11 @@ report = {
     "duplicate_percentage": round(
         (data.duplicated().sum() / len(data)) * 100, 2
     ),
+    "duplicate_status": (
+        "DUPLICATES FOUND"
+        if data.duplicated().sum() > 0
+        else "NO DUPLICATES"
+    ),
     "potential_duplicates": duplicate_count
 }
 
