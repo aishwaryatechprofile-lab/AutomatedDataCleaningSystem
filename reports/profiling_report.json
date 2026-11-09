@@ -22,6 +22,13 @@
         "course": 2,
         "marks": 4
     },
+    "unique_value_percentage": {
+        "student_id": 100.0,
+        "name": 83.33,
+        "age": 50.0,
+        "course": 33.33,
+        "marks": 66.67
+    },
     "constant_columns": [],
     "numerical_statistics": {
         "student_id": {

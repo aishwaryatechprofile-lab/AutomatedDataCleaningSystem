@@ -112,7 +112,11 @@ report = {
     "unique_values": {
         column: int(data[column].nunique())
         for column in data.columns
-},
+    },
+    "unique_value_percentage": {
+        column: round((data[column].nunique() / len(data)) * 100, 2)
+        for column in data.columns
+    },
     "constant_columns": [
         column
         for column in data.columns
