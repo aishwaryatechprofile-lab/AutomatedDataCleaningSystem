@@ -29,6 +29,13 @@
         "course": 33.33,
         "marks": 66.67
     },
+    "most_frequent_value": {
+        "student_id": "101",
+        "name": "Asha",
+        "age": "21",
+        "course": "AI",
+        "marks": "85.0"
+    },
     "constant_columns": [],
     "numerical_statistics": {
         "student_id": {

@@ -117,6 +117,10 @@ report = {
         column: round((data[column].nunique() / len(data)) * 100, 2)
         for column in data.columns
     },
+    "most_frequent_value": {
+        column: str(data[column].mode().iloc[0])
+        for column in data.columns
+    },
     "constant_columns": [
         column
         for column in data.columns
